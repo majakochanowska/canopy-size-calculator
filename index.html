@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Dobierz rozmiar swojego spadochronu</title>
+        <!--<link rel="stylesheet" href="style.css"/>-->
+    </head>
+    <body>
+        <div class="main">
+            <h1>Sprawdź jaką wielkość powinien mieć twój spadochron</h1>
+            <form onsubmit="return result()">
+                <div class="field">
+                    <label>Waga</label>
+                    <input type="number" id="weight" max="120" required>
+                </div>
+                <div class="field">
+                    <label>Liczba skoków</label>
+                    <input type="number" id="jumps" max="499" required>
+                </div>
+                <div class="field">
+                    <label>Liczba skoków w ostatnim roku</label>
+                    <input type="number" id="jumpsperyear" required>
+                </div>
+                <div class="field">
+                    <label>Wysokość, na której położone jest lotnisko</label>
+                    <input type="number" id="altitude" required>
+                </div>
+                <div class="field">
+                    <label>Czy chcesz skakać na spadochronie o w pełni eliptycznym obrysie?</label>
+                    <div><input type="radio" id="ellipticalNo" name="elliptical" value="nie" required>Nie</div>
+                    <div><input type="radio" id="ellipticalYes" name="elliptical" value="tak">Tak</div>
+                </div>
+                <div id="errorElliptical"></div>
+                <div>
+                    <button type="submit" id="submit">Sprawdź</button>
+                </div>
+
+            </form>
+            <div class="results">
+                <p>Rozmiar: <span id="result"></span></p>
+            </div>
+        </div>
+        <script type="text/javascript" src="index.js"></script>
+    </body>
+</html>
+
