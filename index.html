@@ -3,18 +3,18 @@
     <head>
         <meta charset="UTF-8"/>
         <title>Dobierz rozmiar swojego spadochronu</title>
-        <!--<link rel="stylesheet" href="style.css"/>-->
+        <link rel="stylesheet" href="tooltip.css"/>
     </head>
     <body>
         <div class="main">
             <h1>Sprawdź jaką wielkość powinien mieć twój spadochron</h1>
             <form onsubmit="return result()">
                 <div class="field">
-                    <label>Waga</label>
+                    <label>Waga (kg) <span class="tooltip"><img src="question.png"><span class="tooltiptext">Twoja masa ciała + waga sprzętu. Maksymalnie 120 kg</span></span></label>
                     <input type="number" id="weight" max="120" required>
                 </div>
                 <div class="field">
-                    <label>Liczba skoków</label>
+                    <label>Liczba skoków <span class="tooltip"><img src="question.png"><span class="tooltiptext">Maksymalnie 499</span></span></label>
                     <input type="number" id="jumps" max="499" required>
                 </div>
                 <div class="field">
@@ -22,11 +22,11 @@
                     <input type="number" id="jumpsperyear" required>
                 </div>
                 <div class="field">
-                    <label>Wysokość, na której położone jest lotnisko</label>
+                    <label>Wysokość n.p.m., na której położona jest strefa spadochronowa (m) </label>
                     <input type="number" id="altitude" required>
                 </div>
                 <div class="field">
-                    <label>Czy chcesz skakać na spadochronie o w pełni eliptycznym obrysie?</label>
+                    <label>Czy chcesz skakać na spadochronie o obrysie eliptycznym? <span class="tooltip"><img src="question.png"><span class="tooltiptext">Niezalecane, jeśli masz mniej niż 300 skoków</span></span></label>
                     <div><input type="radio" id="ellipticalNo" name="elliptical" value="nie" required>Nie</div>
                     <div><input type="radio" id="ellipticalYes" name="elliptical" value="tak">Tak</div>
                 </div>
@@ -40,7 +40,7 @@
                 <p>Rozmiar: <span id="result"></span></p>
             </div>
         </div>
-        <script type="text/javascript" src="index.js"></script>
+        <script type="text/javascript" src="canopy.js"></script>
     </body>
 </html>
 
